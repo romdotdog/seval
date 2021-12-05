@@ -1,6 +1,7 @@
 #include "number.h"
 #include <stddef.h>
 
+//// why would you put the brace at a new line this ain't java
 typedef enum tokentype
 {
 	TK_NONE,
@@ -22,6 +23,8 @@ typedef struct token
 typedef struct lexer
 {
 	char *src;
+    //// a bit useless tho, the function should keep it as a local variable
+    //// so that the compiler might do opts like use registers
 	char current;
 	size_t size;
 	size_t offset;

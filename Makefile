@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -I ./ -std=c99 -Wall -Wextra -g
+CFLAGS = -I ./ -std=c99 -Wall -Wextra -O0 -g
 OBJS = number.o lexer.o parser.o display.o main.o
 
 .PHONY: all clean
