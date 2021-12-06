@@ -44,14 +44,11 @@ static int read_numeral(lexer_t *ctx)
 		{
 		case '0' ... '9':;
 			int val = c - '0';
-			switch (state)
-			{
-			case FRACTIONAL:
+			
+			if (state == FRACTIONAL)
 				denom->integer *= 10;
-			case INTEGER:
-				num->integer = num->integer * 10 + val;
-				break;
-			}
+			num->integer = num->integer * 10 + val;
+
 			c = next(ctx);
 			break;
 		case '.':
