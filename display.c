@@ -65,4 +65,5 @@ int seval_print(symbol_t *res)
 	printer.offset = 0;
 	traverse(&printer, res);
 	printf("%s\n", printer.buf);
+	free(printer.buf);
 }
